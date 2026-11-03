@@ -1,5 +1,5 @@
 # C Error Detector & Correction Suggester
-Compiler Design Lab - Project Based Learning (PBL)
+Compiler Design Lab - Project Based Learning (PBL) for 5th Semester
 
 Finds lexical, syntax and semantic errors in a C program and suggests how to fix them.
 The whole tool is one standard-C file: error_detector.c
