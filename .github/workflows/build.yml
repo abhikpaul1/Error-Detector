@@ -1,0 +1,15 @@
+name: Build and Test
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Compile
+        run: gcc -Wall -Wextra -o error_detector error_detector.c
+      - name: Run the four sample programs
+        run: printf '1\n2\n3\n4\n0\n' | ./error_detector
+      - name: Check results (sample 1 clean, sample 4 finds problems)
+        run: |
+          printf '1\n0\n' | ./error_detector | grep -F "RESULT: 0 error(s), 0 warning(s)"
+          printf '4\n0\n' | ./error_detector | grep -F "RESULT: 4 error(s), 4 warning(s)"
