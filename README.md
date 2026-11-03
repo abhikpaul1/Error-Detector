@@ -17,6 +17,4 @@ The whole tool is one standard-C file: error_detector.c
 - Syntax: unbalanced brackets, missing ;, = inside conditions, wrong for-loop header
 - Semantic: undeclared or repeated names, misspelled keywords, scanf without &, printf/scanf format mismatch, division by zero
 
-## Example
-Line 7: Call to undeclared function 'prinf'
-        -> Suggestion: Did you mean 'printf'?
+
